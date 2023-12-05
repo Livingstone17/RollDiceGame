@@ -20,19 +20,19 @@ import {
   View,
 } from 'react-native';
 
-// import {Diceone,Dicetwo,Dicethree,Dicefour,Dicefive,Dicesix} from "../assets/index";
+import {DiceOne,DiceTwo,DiceThree,DiceFour,DiceFive,DiceSix} from "./commons";
 
-import Diceone from '../assets/One.png'
-import Dicetwo from '../assets./Two.png'
-import Dicethree from '../assets/Three.jpeg'
-import Dicefour from '../assets/Four.jpeg'
-import Dicefive from '../assets/Five.png'
-import Dicesix from '../assets/Six.png'
+// import Diceone from '../assets/One.png'
+// import Dicetwo from '../assets./Two.png'
+// import Dicethree from '../assets/Three.jpeg'
+// import Dicefour from '../assets/Four.jpeg'
+// import Dicefive from '../assets/Five.png'
+// import Dicesix from '../assets/Six.png'
 
 
 
 type DiceProps =PropsWithChildren<{
-  imageUrl: ImageSourcePropType
+  imageUrl: string
 }>
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -41,14 +41,14 @@ type SectionProps = PropsWithChildren<{
 const Dice =({imageUrl}:DiceProps):JSX.Element => {
  return (
   <View>
-    <Image style={styles.diceImage} source={imageUrl} resizeMode='contain'/>
+    <Image style={styles.diceImage} source={{uri: imageUrl}} resizeMode='contain'/>
     
   </View>
  )
 }
 
 function App(): JSX.Element {
-  const [diceImage, setDiceImage] = useState<ImageSourcePropType>(Diceone);
+  const [diceImage, setDiceImage] = useState(DiceOne);
  
   const rollDiceOnTap = () => {
     let randomNumber = Math.floor(Math.random() * 6) +1;
@@ -56,26 +56,26 @@ function App(): JSX.Element {
 
     switch (randomNumber) {
       case 1:
-        setDiceImage(Diceone)
+        setDiceImage(DiceOne)
         break;
         case 2:
-          setDiceImage(Dicetwo)
+          setDiceImage(DiceTwo)
           break;
           case 3:
-        setDiceImage(Dicethree)
+        setDiceImage(DiceThree)
         break;
         case 4:
-        setDiceImage(Dicefour)
+        setDiceImage(DiceFour)
         break;
         case 5:
-        setDiceImage(Dicefive)
+        setDiceImage(DiceFive)
         break;
         case 6:
-        setDiceImage(Dicesix)
+        setDiceImage(DiceSix)
         break;
     
       default:
-        setDiceImage(Diceone)
+        setDiceImage(DiceOne)
         break;
     }
   }
