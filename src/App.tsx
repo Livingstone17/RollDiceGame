@@ -22,12 +22,12 @@ import {
 
 // import {Diceone,Dicetwo,Dicethree,Dicefour,Dicefive,Dicesix} from "../assets/index";
 
-import Diceone from '../assets/dice-1.jpeg'
-import Dicetwo from '../assets/dice-2.png'
-import Dicethree from '../assets/dice-3.jpeg'
-import Dicefour from '../assets/dice-4.jpeg'
-import Dicefive from '../assets/dice-5.png'
-import Dicesix from '../assets/dice-6.png'
+import Diceone from '../assets/One.png'
+import Dicetwo from '../assets./Two.png'
+import Dicethree from '../assets/Three.jpeg'
+import Dicefour from '../assets/Four.jpeg'
+import Dicefive from '../assets/Five.png'
+import Dicesix from '../assets/Six.png'
 
 
 
